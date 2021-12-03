@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void addRoleToUser(String userName, String roleName) {
     AppUser appUser=appUserRepository.findByUsername(userName);
-    AppRole appRole=appRoleRepository.findByRoleName(roleName);
+    AppRole appRole=appRoleRepository.findByRolename(roleName);
     appUser.getAppRoles().add(appRole);
     }
 
